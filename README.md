@@ -7,6 +7,7 @@ We believe in open source efforts for an ever-growing blockchain community. Plea
   3) https://www.linkedin.com/company/PDXbaap
   4) https://www.reddit.com/user/pdxbaap/
   5) https://baap.io/
+
 When the PDX public blockchain goes online mid 2018, the first 100,000 followers will be rewarded.
 
 
