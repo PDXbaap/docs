@@ -1,7 +1,7 @@
-# PDXbaap
-All artifacts of PDX BaaP, a public blockchain for real-world applications. We will open source everything in the near future, but in the mean while please check https://github.com/PDXTechnologies for manuals and examples.
+All manuals of PDX BaaP, a public blockchain ecosystem for real-world applications, are hosted here. 
 
 We believe in open source efforts for an ever-growing blockchain community. Please follow us on:
+
   1) https://www.facebook.com/PDXbaap
   2) https://twitter.com/PDXbaap
   3) https://www.linkedin.com/company/PDXbaap
