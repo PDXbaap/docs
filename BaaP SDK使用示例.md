@@ -404,3 +404,14 @@ private static void withdraw(BlockchainDriver driver, String chaincode, String v
 
 
 
+> 注意：PDX 的沙箱严格限制了CC的很多行为。一般情况下我们采用最严格的情形
+>
+> 1 不允许读写目录
+>
+> 2 只允许连接本地端口
+>
+> 3 内存限制为64M
+>
+> 4 CPU限制为5%
+>
+> 另外，对于chaincode，我们规定不允许超过256个state.Key，每对key/value不能超过1k，且历史记录只保存最近100条！ 
