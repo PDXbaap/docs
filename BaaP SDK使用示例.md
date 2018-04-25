@@ -305,8 +305,8 @@ public class MyCc extends ChaincodeBaseX {
     private static void stream(BlockchainDriver driver) throws Exception {
         StreamStub streamStub = driver.stream(new RejectedStreamListener());
         String stream = streamStub.open(dst, null);
-        streamStub.data(stream, "hello PDX".getBytes());
-        streamStub.close(stream, Constants.BAAP_STAT_SUCCESS, "finish", null);
+        streamStub.data(stream, "Hello PDX".getBytes());
+        streamStub.close(stream, Constants.BAAP_STAT_SUCCESS, "Normal", null);
     }
 ```
 
