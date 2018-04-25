@@ -53,7 +53,7 @@ public class MyCc extends ChaincodeBaseX {
 				case "getHis":
 					QueryResultsIterator<KeyModification> historyForKey = stub.getHistoryForKey(params.get(0));
 					historyForKey.forEach(e -> {
-						logger.info("key : {} /value : {} /isDelete : {}", e.getTxId(), e.getStringValue(), e.isDeleted());
+												logger.info("tid : {} /key : {} /value : {} /isDelete : {}", e.getTxId(), params.get(0), e.getStringValue(), e.isDeleted());
 					});
 					historyForKey.close();
 					break;
@@ -371,7 +371,7 @@ private static void deploy(BlockchainDriver driver, String chaincode, String ver
 private static void start(BlockchainDriver driver, String chaincode, String version) throws Exception {
 		Chaincode cc = Chaincode.builder().chain(Constants.BAAP_ENGIEN_ETHEREUM_CHAIN_DEFAULT)
 				.name(chaincode).version(version).build();
-		String txId = EthereumDeploy.builder().driver(driver).build().start();
+		String txId = EthereumDeploy.builder().driver(driver).chaincode(cc).build().start();
 		System.out.println(txId);
 	}
 ```
