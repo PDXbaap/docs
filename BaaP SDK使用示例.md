@@ -7,7 +7,7 @@
 <repository>
    <id>pdx-release</id>
    <name>biz.pdxtech</name>
-   <url>http://dap.pdx.life:8081/nexus/content/repositories/releases</url>
+   <url>http://daap.pdx.life:8081/nexus/content/repositories/releases</url>
 </repository>
 ```
 配置PDX依赖包`baap-shim`
