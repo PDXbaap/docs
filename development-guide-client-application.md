@@ -55,7 +55,6 @@
 > ```
 
 > **close a stream**
-
 > Parameters：  
 > ​	stream    -   stream ID
 > ​	status     -    status
