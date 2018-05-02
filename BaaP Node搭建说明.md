@@ -4,7 +4,7 @@
 
 ### 1. 下载安装包
 
-下载地址：http://124.204.47.69/pdx-baap/pdx-baap.tar.gz
+下载地址：http://124.204.47.69:8081/pdx-baap/pdx-baap.tar.gz
 
 ### 2. 设置环境变量
 
