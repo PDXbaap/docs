@@ -20,13 +20,13 @@ PDX dependency
 </dependency>
 ```
 
-### 2. PDX BaaP provides a simple class for provisioning, start, stop and de-provisioning of smart contracts.
+### 2. Deploy, start, stop & remove
 
-Note that PDX BaaP employs lay-loading mode on smart contracts. The deployer can manually start it or it'll auto-started on executing first TX 
+PDX BaaP provides a simple class for provisioning, start, stop and de-provisioning of smart contracts. Note that PDX BaaP employs lazy-loading mode on smart contracts. The deployer can manually start it or it'll auto-started on executing first TX. 
 
-Refer to class `ChaincodeDeploy.class` and the following code excerpt:
+Please refer to class `ChaincodeDeploy.class` and the following code excerpt for details:
 
-#### Provision
+#### Deploy
 
 ```java
 private static void deploy(BlockchainDriver driver, String chaincode, String version, String jarPath) throws Exception {
@@ -68,7 +68,7 @@ private static void stop(BlockchainDriver driver, String chaincode, String versi
 
 
 
-#### de-provision
+#### Remove
 
 ```java
 private static void withdraw(BlockchainDriver driver, String chaincode, String version) throws Exception {
