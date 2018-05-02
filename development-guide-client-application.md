@@ -1,4 +1,4 @@
-### 1. Configuring maven pom.xm
+### 1. Configuring maven pom.xml
 
 #### Maven repository
 ```xml
