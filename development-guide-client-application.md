@@ -54,7 +54,7 @@
 > void data(String stream, byte[] data) throws BaapStreamException;
 > ```
 
-> **close a stream**
+> **close a stream** 
 > Parameters：  
 > ​	stream    -   stream ID
 > ​	status     -    status
@@ -64,7 +64,7 @@
 > void close(String stream, int status, String reason, byte[] extra) throws BaapStreamException;
 > ```
 
-> **send ping-pong message**
+> **send ping-pong message** 
 > Parameters： 
 > ​	stream   -   stream ID
 > ​	random    - random number
@@ -72,7 +72,7 @@
 > void echo(String stream, int random) throws BaapStreamException;
 > ```
 
-> **send status message**
+> **send status message** 
 > Parameters： 
 > ​	stream  - stream ID
 > ​	status   - status
