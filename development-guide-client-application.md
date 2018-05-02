@@ -37,6 +37,7 @@
 #### `biz.pdxtech.baap.api.stream.StreamStub`
 
 > **create a stream**  
+
 > Parameters：
 > ​	dst    - peer address，scheme is cc://{chaincode}?pub-key={pub-key}, or cli://{cliId}?pub-key={pub-key}
 > ​	extra - extra data 
@@ -47,6 +48,7 @@
 > ```
 
 > **send stream data, maxed at 1MB when PUBLIC-MOST-RESTRICTED sandboxing type is applied.**  
+
 > Parameters：
 > ​	stream  -   stream ID 
 > ​	data    -   data itself
@@ -55,6 +57,7 @@
 > ```
 
 > **close a stream** 
+
 > Parameters：  
 > ​	stream    -   stream ID
 > ​	status     -    status
@@ -65,6 +68,7 @@
 > ```
 
 > **send ping-pong message** 
+
 > Parameters： 
 > ​	stream   -   stream ID
 > ​	random    - random number
@@ -73,6 +77,7 @@
 > ```
 
 > **send status message** 
+
 > Parameters： 
 > ​	stream  - stream ID
 > ​	status   - status
