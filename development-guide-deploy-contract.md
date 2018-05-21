@@ -6,7 +6,7 @@ Maven repository
 <repository>
    <id>pdx-release</id>
    <name>biz.pdxtech</name>
-   <url>http://daap.pdx.life:8081/nexus/content/repositories/releases</url>
+   <url>http://repo.pdxtech.biz:8081/nexus/content/repositories/releases</url>
 </repository>
 ```
 
