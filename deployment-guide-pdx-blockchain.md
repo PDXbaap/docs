@@ -4,7 +4,7 @@ Note that PDX blockchain only supports Linux X64 with a kernel version of 3.10.0
 
 ### 1. Download installation package
 
-http://124.204.47.69:8181/pdx-baap/pdx-baap.tar.gz
+http://download.pdxtech.biz:8181/pdx-baap/pdx-baap.tar.gz
 
 ### 2. Set environment variable
 
