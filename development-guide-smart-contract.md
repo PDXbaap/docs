@@ -30,11 +30,12 @@ public abstract Response invoke(ChaincodeStub stub);
 ``` java
 public class MyChaincode extends ChaincodeBaseX {
 	private static Logger logger = LoggerFactory.getLogger(MyChaincode.class);
+	
 	@Override
 	public Response init(ChaincodeStub stub) {
 		return newSuccessResponse();
 	}
-  
+	
 	@Override
 	public Response invoke(ChaincodeStub stub) {
 		String payload = "";
@@ -48,7 +49,7 @@ public class MyChaincode extends ChaincodeBaseX {
 				case "his":
 					QueryResultsIterator<KeyModification> historyForKey = stub.getHistoryForKey(params.get(0));
 					historyForKey.forEach(e -> {
-												logger.info("tid : {} /key : {} /value : {} /isDelete : {}", e.getTxId(), params.get(0), e.getStringValue(), e.isDeleted());
+						logger.info("txid : {} /key : {} /value : {} /isDelete : {}", e.getTxId(), params.get(0), e.getStringValue(), e.isDeleted());
 					});
 					historyForKey.close();
 					break;
@@ -79,43 +80,13 @@ public class MyChaincode extends ChaincodeBaseX {
 		return newSuccessResponse(payload.getBytes());
 	}
 	
-	private StreamStub stub;
 	public static void main(String[] args) throws Exception {
 		Arrays.stream(args).forEach(System.out::println);
 		MyChaincode myChaincode = new MyChaincode();
 		myChaincode.start(args);
-		// if you want the stream function
-		// myChaincode.stub = myChaincode.stream(new MyStreamListener());
-	}
-	
-	//monitor receiving message
-	private static class MyStreamListener implements StreamListener {
-		@Override
-		public BaapStream.StatFrame onOpen(String stream, BaapStream.OpenFrame openFrame) {
-			return FrameUtil.successStatFrame();
-        }
-      
-		@Override
-		public BaapStream.StatFrame onData(StreamStub stub, String stream, BaapStream.DataFrame dataFrame) {
-			return null;
-		}
-		
-		@Override
-		public void onClose(String stream, BaapStream.CloseFrame closeFrame) {
-		}
-		
-		@Override
-		public BaapStream.EchoFrame onEcho(String stream, BaapStream.EchoFrame echoFrame) {
-			return null;
-		}
-		
-		@Override
-		public void onStat(String stream, BaapStream.StatFrame statFrame) {
-			logger.info(String.format("onStat stream:%s, status:%s, reason:%s", stream, statFrame.getStatus(), statFrame.getReason()));
-		}
 	}
 }
-``` 
+```
 ### Notes:
 
 #### 1) Currently PDX chaincode SDK does not support invokeChaincode* and getStateByPartialCompositeKey

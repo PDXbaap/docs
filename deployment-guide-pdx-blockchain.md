@@ -4,7 +4,7 @@ Note that PDX blockchain only supports Linux X64 with a kernel version of 3.10.0
 
 ### 1. Download installation package
 
-http://download.pdxtech.biz:8181/pdx-baap/pdx-baap.tar.gz
+http://download.pdxtech.biz:8181/pdx-baap/v1.0/pdx-baap.tar.gz
 
 ### 2. Set environment variable
 
@@ -32,6 +32,7 @@ cd /data/pdx/baap
 
 ```shell
 cd /data/pdx/baap
+
 ./eth.py -start 739
 ```
 
@@ -59,23 +60,24 @@ cd /data/pdx/baap
 ./eth.py -stop 739
 ```
 
-### 9. View status of blockchain engine
+### 9. View status of blockchain platform
 
 ```shell
 cd /data/pdx/baap
 
-./eth.py -stat 739
+./eth.py -stat
 ```
 
-### 10. View status of blockchain platform
+### 10. View status of blockchain engine
 
 ```shell
 cd /data/pdx/baap
 
-./baap.py -stat
+./baap.py -stat 739
 ```
 
 Notes:
 
 * *1 Step 5) & step 6) must be run in order to start PDX blockchain*
 * *2 The blockchain platform must be stopped when stopping the blockchain engine*
+
